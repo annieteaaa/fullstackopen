@@ -1,0 +1,26 @@
+0.4: new note
+
+browser->server: HTTP POST
+https://studies.cs.helsinki.fi/exampleapp/new_note
+server->browser: HTTP GET
+https://studies.cs.helsinki.fi/exampleapp/notes
+
+In Form Data:
+note: note data here
+is sent to server side, updates the notes array with this new note info and current date and time, and server redirects browser back to exampleapp/notes with a page reload
+
+
+0.5: Single page app
+
+browser fetches the one HTML page from the server
+browser's JavaScript executes, manipulating contents of the page
+
+
+0.6: New note
+
+POST request to address new_note_spa, sending the new note as JSON-data with the note content and timestamp
+notes array gets updated with the new note
+form is cleared
+stay on the same page
+only the list of notes is updated
+send the new note object as JSON-string to the server with an HTTP POST request and the data of type JSON
